@@ -1,0 +1,16 @@
+In order to be able to compile and run our source, you should have a Linux (Ubuntu) or Mac machine. 
+Here is the environment requirement.
+
+1. Python 3.6: Install from Annaconda is recommended, make sure you have all basic components of Python like pip, numpy, matplotlib and etc.
+
+2. CUDA 10.0: We currently use a CUDA 10.0 version, lower version should also be fine. An CUDA supported Nvidia GPU are also recommended, it will be 30x-50x faster if you do training and prediction with an CUDA supported GPU. Take a reference here for installition https://developer.nvidia.com/cuda-toolkit/whatsnew, if your GPU driver are correctly install, you can type nvidia-smi in your terminal to see if your CUDA environment is ready for experiment.
+
+3. Pytorch 0.3.1: Note that you should use Pytorch 0.3.1 for this experiment, the latest version 0.4.1 is not compatible with the baseline models in deepmatcher, you can do this by simply use pip with following command: pip install torch==0.3.1, if your torch is ready, just call torch.cuda.is_available() in your Python shell, make sure your CUDA works fine with PyTorch.
+
+4. TorchText 0.2.3: Library for doing word embedding, simply install with pip like: pip install torchtext==0.2.3.
+
+5. Scikit-learn and gensim: General libraries for machine learning and nature language processing, install them by simply using pip, eg. pip install scikit-learn, pip install gensim.
+
+6. DeepMatcher: An open source entity matcher published in SIGMOD 2018 paper for comparing baselines, I already provide this library in the code, just go to the deepmatcher and run the setup.py to make sure it can work on your machine. You can also install it by simply use pip install deepmatcher, you can refer to https://github.com/anhaidgroup/deepmatcher to see how to run baselines with this library.
+
+If you have any questions for machine configuration or compatability problem, feel free to contact Kailin (tangkl@umich.edu) or Siyuan (xiesiyu@umich.edu) in email.
